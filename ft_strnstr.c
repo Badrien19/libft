@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/07 11:07:16 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/08 14:42:06 by badrien          ###   ########.fr       */
+/*   Created: 2019/10/08 13:43:03 by badrien           #+#    #+#             */
+/*   Updated: 2019/10/08 15:00:16 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-
-#define size_t unsigned int
-
-int ft_isascii(int c);
-int ft_isalnum(int c);
-int ft_isalpha(int c);
-int ft_isdigit(int c);
-int ft_isprint(int c);
-int ft_strlen(char *chaine);
-int ft_tolower(int c);
-int ft_toupper(int c);
-char	*ft_strchr(const char *str, int c);
-char	*ft_strrchr(const char *str, int c);
-unsigned int ft_strlcpy(char *dest, char *src, unsigned int size);
-int	ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *phrase, const char *mot, int len)
+{
+	int i;
+	int x;
+	int taille;
 
-#endif
+	i = 0;
+	x = 0;
+	taille = 0;
+	while (mot[taille] != '\0')
+		taille++;
+	if (taille == 0 || len == 0)
+		return ((char *)phrase);
+	while (phrase[i] != '\0' && i < len)
+	{
+		while (phrase[i + x] == mot[x] && i + x < len && phrase[i + x] != '\0')
+			x++;
+		if (x == taille)
+			return ((char *)&phrase[i]);
+		x = 0;
+		i++;
+	}
+	return (0);
+}

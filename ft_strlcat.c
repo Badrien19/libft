@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/08 17:25:39 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/09 09:55:08 by badrien          ###   ########.fr       */
+/*   Created: 2019/10/09 10:16:57 by badrien           #+#    #+#             */
+/*   Updated: 2019/10/09 10:57:01 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	unsigned char	tmp[n]; // on compare les adresse si dest < src on commence debut sinon on commencer par n et decremente
-	unsigned int	i;
+	unsigned int i;
+	unsigned int y;
 
-	i = 0;
-	if ((((unsigned char*)dest) == 0) && (((unsigned char*)src) == 0))
-		return (0);
-	while (i < n)
+	y = 0;
+	if (size == 0)
+		return (ft_strlen((char*)src));
+	i = ft_strlen((char*)dest);
+	while (i + y < size - 1)
 	{
-		tmp[i] = ((unsigned char*)src)[i];
-		i++;
+		dest[i + y] = src[y];
+		y++;
 	}
-	i = 0;
-	while (i < n)
-	{
-		((unsigned char*)dest)[i] = tmp[i];
-		i++;
-	}
-	return (dest);
+	if (dest[size - 1] != '\0')
+		return (ft_strlen((char*)src) + size);
+	return (i + (ft_strlen((char *)src)));
 }

@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/08 17:25:39 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/09 14:10:14 by badrien          ###   ########.fr       */
+/*   Created: 2019/10/09 11:41:56 by badrien           #+#    #+#             */
+/*   Updated: 2019/10/09 14:49:53 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int	i;
+	unsigned int	i;
+	char			*rep;
 
-	i = -1;
-	if (dest == 0 && src == 0)
+	i = 0;
+	if ((rep = malloc((sizeof(char) *
+		(ft_strlen(&((char*)s)[start]) + 1)))) == 0)
 		return (0);
-
-	if (dest < src)
-		while ((unsigned int)++i < n)
-			((unsigned char*)dest)[i] = ((unsigned char*)src)[i];
-	else
-		while (n-- > 0)
-			((unsigned char*)dest)[n] = ((unsigned char*)src)[n];
-	return (dest);
+	while (i < len && s[start + i] != '\0')
+	{
+		rep[i] = s[start + i];
+		i++;
+	}
+	return (rep);
 }

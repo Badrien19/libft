@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/08 17:25:39 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/09 14:10:14 by badrien          ###   ########.fr       */
+/*   Created: 2019/10/09 14:50:35 by badrien           #+#    #+#             */
+/*   Updated: 2019/10/09 15:39:50 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	int	i;
+	char *ret;
 
-	i = -1;
-	if (dest == 0 && src == 0)
+	if ((ret = malloc(size * nmemb)) == 0)
 		return (0);
-
-	if (dest < src)
-		while ((unsigned int)++i < n)
-			((unsigned char*)dest)[i] = ((unsigned char*)src)[i];
-	else
-		while (n-- > 0)
-			((unsigned char*)dest)[n] = ((unsigned char*)src)[n];
-	return (dest);
+	ft_bzero(ret, size);
+	return (ret);
 }

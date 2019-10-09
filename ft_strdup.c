@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/08 17:25:39 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/09 14:10:14 by badrien          ###   ########.fr       */
+/*   Created: 2019/10/09 15:05:32 by badrien           #+#    #+#             */
+/*   Updated: 2019/10/09 15:32:44 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+char	*ft_strdup(const char *s)
 {
-	int	i;
+	char			*new;
+	unsigned int	i;
 
-	i = -1;
-	if (dest == 0 && src == 0)
+	if ((new = malloc(sizeof(char) * ft_strlen((char *)s) + 1)) == 0)
 		return (0);
-
-	if (dest < src)
-		while ((unsigned int)++i < n)
-			((unsigned char*)dest)[i] = ((unsigned char*)src)[i];
-	else
-		while (n-- > 0)
-			((unsigned char*)dest)[n] = ((unsigned char*)src)[n];
-	return (dest);
+	i = ft_strlcpy(new, (char*)s, ft_strlen((char *)s));
+	return (new);
 }

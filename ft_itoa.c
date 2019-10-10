@@ -6,7 +6,7 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 16:34:27 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/10 17:36:11 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/10 17:58:49 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char	*ft_itoa(int n)
 	}
 	if (signe == -1)
 		i++;
-	if (nb == 2147483648 && signe == -1)
+	if (nb >= 2147483648 && signe == -1)
 		i = 10;
 	return (fill_number(i, nb, signe));
 }

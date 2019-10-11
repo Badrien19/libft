@@ -6,20 +6,19 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 18:31:44 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/10 18:41:57 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/11 15:13:50 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-	int i;
-	char c;
+	int		i;
+	char	c;
 
 	c = '\n';
 	i = ft_strlen(s);
-
 	write(fd, s, i);
 	write(fd, &c, 1);
 }

@@ -6,7 +6,7 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 17:25:39 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/09 14:10:14 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/11 15:08:36 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	i = -1;
 	if (dest == 0 && src == 0)
 		return (0);
-
 	if (dest < src)
 		while ((unsigned int)++i < n)
 			((unsigned char*)dest)[i] = ((unsigned char*)src)[i];

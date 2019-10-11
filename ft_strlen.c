@@ -6,11 +6,13 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 10:00:39 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/07 11:58:05 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/11 17:53:56 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *chaine)
+#include "libft.h"
+
+size_t	ft_strlen(const char *chaine)
 {
 	int i;
 

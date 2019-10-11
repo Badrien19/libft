@@ -6,7 +6,7 @@
 #    By: badrien <badrien@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/07 10:38:07 by badrien           #+#    #+#              #
-#    Updated: 2019/10/10 18:36:31 by badrien          ###   ########.fr        #
+#    Updated: 2019/10/11 17:45:11 by badrien          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,22 +28,21 @@ RM = rm -rf
 
 CFLAGS = -Wall -Wextra -Werror
 
-.c.o:
-	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+${NAME}:	all
 
-${NAME}:	${OBJS}
+all:	${OBJS}
 			${LIB} ${NAME} ${OBJS}
-
-all:		${NAME}
 
 clean:
 			${RM} ${OBJS}
 
-c:			clean
 fclean: 	clean
 			${RM} ${NAME}
 
 re: fclean all
+
+.c.o:
+	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 so:			$(OBJ) libft.h
 			$(CC) -shared -fPIC -Wl,-soname,libft.so -o libft.so $(OBJ)

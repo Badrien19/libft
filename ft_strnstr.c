@@ -6,7 +6,7 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 13:43:03 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/08 15:00:16 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/11 15:06:17 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strnstr(const char *phrase, const char *mot, int len)
 	taille = 0;
 	while (mot[taille] != '\0')
 		taille++;
-	if (taille == 0 || len == 0)
+	if (taille == 0)
 		return ((char *)phrase);
 	while (phrase[i] != '\0' && i < len)
 	{

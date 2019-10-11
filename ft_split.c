@@ -6,13 +6,13 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 15:36:21 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/10 16:02:35 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/11 15:20:16 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int			motcounter(char *str, char charset)
+static int		motcounter(char *str, char charset)
 {
 	int i;
 	int mot;
@@ -37,7 +37,7 @@ int			motcounter(char *str, char charset)
 	return (motcount);
 }
 
-char		*fill(char *str, char charset, int *i)
+static char		*fill(char *str, char charset, int *i)
 {
 	char	*tmp;
 	int		y;
@@ -57,7 +57,7 @@ char		*fill(char *str, char charset, int *i)
 	return (tmp);
 }
 
-char		**ft_split(char *str, char charset)
+char			**ft_split(char *str, char charset)
 {
 	int		wordcount;
 	char	**tab;

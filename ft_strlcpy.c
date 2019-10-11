@@ -6,11 +6,13 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 14:32:17 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/09 10:16:44 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/11 17:52:05 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
 	unsigned int i;
 	unsigned int b;
@@ -19,6 +21,8 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	b = 0;
 	while (src[b] != '\0')
 		b++;
+	if (size == 0)
+		return (b);
 	while (src[i] != '\0' && i < size - 1)
 	{
 		dest[i] = src[i];

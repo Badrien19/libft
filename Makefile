@@ -6,7 +6,7 @@
 #    By: badrien <badrien@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/07 10:38:07 by badrien           #+#    #+#              #
-#    Updated: 2019/10/11 17:45:11 by badrien          ###   ########.fr        #
+#    Updated: 2019/10/15 09:41:25 by badrien          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,9 +28,9 @@ RM = rm -rf
 
 CFLAGS = -Wall -Wextra -Werror
 
-${NAME}:	all
+all:	${NAME}
 
-all:	${OBJS}
+${NAME}:	${OBJS}
 			${LIB} ${NAME} ${OBJS}
 
 clean:

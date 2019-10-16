@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/07 14:32:17 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/16 16:20:23 by badrien          ###   ########.fr       */
+/*   Created: 2019/10/15 12:05:52 by badrien           #+#    #+#             */
+/*   Updated: 2019/10/16 18:18:56 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, char *src, unsigned int size)
+t_list	*ft_lstlast(t_list *lst)
 {
-	unsigned int i;
-	unsigned int b;
-
-	i = 0;
-	b = 0;
-	while (src[b] != '\0')
-		b++;
-	if (size == 0)
-		return (b);
-	while (src[i] != '\0' && i < size - 1)
+	if (lst != NULL)
 	{
-		dest[i] = src[i];
-		i++;
+		while (lst->next != '\0')
+			lst = lst->next;
+		return (lst);
 	}
-	if (i != size)
-		dest[i] = '\0';
-	return (b);
+	return (0);
 }

@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/07 14:32:17 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/16 16:20:23 by badrien          ###   ########.fr       */
+/*   Created: 2019/10/16 16:39:01 by badrien           #+#    #+#             */
+/*   Updated: 2019/10/16 18:19:29 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, char *src, unsigned int size)
+t_list	*ft_lstmap(t_list *lst, void *(*fonc)(void *))
 {
-	unsigned int i;
-	unsigned int b;
+	t_list *new;
 
-	i = 0;
-	b = 0;
-	while (src[b] != '\0')
-		b++;
-	if (size == 0)
-		return (b);
-	while (src[i] != '\0' && i < size - 1)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	if (i != size)
-		dest[i] = '\0';
-	return (b);
+	if (lst == NULL || fonc == NULL)
+		return (NULL);
+	if (new == NULL)
+		return (NULL);
+	if ((new = ft_lstnew(lst->content)) == NULL)
+		return (NULL);
+	new->content = fonc(new->content);
+	new->next = ft_lstmap(lst->next, fonc);
+	return (new);
 }

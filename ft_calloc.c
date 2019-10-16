@@ -6,7 +6,7 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 14:50:35 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/09 15:39:50 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/16 14:47:43 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,17 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char *ret;
+	char			*ret;
+	unsigned int	i;
 
+	if (nmemb == 0 || size == 0)
+		return (NULL);
 	if ((ret = malloc(size * nmemb)) == 0)
 		return (0);
-	ft_bzero(ret, size);
+	i = (size * nmemb);
+	while (--i != 0)
+	{
+		ret[i] = '\0';
+	}
 	return (ret);
 }

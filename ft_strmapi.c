@@ -6,7 +6,7 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 17:55:31 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/11 15:13:26 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/17 15:50:09 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*map;
 	unsigned int	i;
 
+	if (s == NULL || f == NULL)
+		return (NULL);
 	i = 0;
 	if (!(map = malloc(sizeof(char) * (ft_strlen((char*)s) + 1))))
 		return (0);

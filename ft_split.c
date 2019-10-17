@@ -6,11 +6,11 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 15:36:21 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/16 12:30:06 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/17 18:08:00 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static char		**free_all(char **tab)
 {
@@ -77,6 +77,8 @@ char			**ft_split(char *str, char charset)
 
 	x = 0;
 	i = 0;
+	if (str == NULL || charset == 0)
+		return (NULL);
 	wordcount = motcounter(str, charset);
 	tab = malloc(sizeof(char *) * wordcount + 1);
 	if (tab == 0)

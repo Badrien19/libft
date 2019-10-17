@@ -6,11 +6,10 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 11:41:56 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/17 10:37:14 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/17 18:08:23 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 /*
@@ -22,6 +21,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	unsigned int	i;
 	char			*rep;
 
+	if (s == NULL)
+		return (NULL);
 	i = 0;
 	if ((rep = malloc((sizeof(char) * (len + 1)))) == 0)
 		return (0);

@@ -6,11 +6,10 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 14:50:35 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/16 14:47:43 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/17 18:09:01 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)

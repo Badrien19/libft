@@ -6,12 +6,11 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 15:05:32 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/09 15:49:55 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/17 18:08:59 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strdup(const char *s)
 {

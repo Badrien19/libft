@@ -6,12 +6,11 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 12:52:23 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/11 17:58:31 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/17 18:08:29 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -19,6 +18,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	unsigned int	start;
 	unsigned int	nb;
 
+	if (s1 == NULL || set == NULL)
+		return (NULL);
 	start = 0;
 	while (ft_strchr(set, s1[start]) && s1[start] != '\0')
 		start++;

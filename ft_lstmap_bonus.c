@@ -6,7 +6,7 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 16:39:01 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/16 18:19:29 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/17 10:43:29 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ t_list	*ft_lstmap(t_list *lst, void *(*fonc)(void *))
 {
 	t_list *new;
 
+	new = NULL;
+
 	if (lst == NULL || fonc == NULL)
-		return (NULL);
-	if (new == NULL)
 		return (NULL);
 	if ((new = ft_lstnew(lst->content)) == NULL)
 		return (NULL);

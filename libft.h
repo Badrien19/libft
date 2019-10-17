@@ -6,7 +6,7 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:07:16 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/16 17:34:57 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/17 12:28:31 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 
 typedef struct	s_list
 {
-void *content;
-struct s_list *next;
-} t_list;
+	void			*content;
+	struct s_list	*next;
+}				t_list;
 
 int				ft_isascii(int c);
 int				ft_isalnum(int c);
@@ -33,7 +33,7 @@ int				ft_tolower(int c);
 int				ft_toupper(int c);
 char			*ft_strchr(const char *str, int c);
 char			*ft_strrchr(const char *str, int c);
-size_t			ft_strlcpy(char *dest, char *src, unsigned int size);
+size_t			ft_strlcpy(char *dest,const char *src, unsigned int size);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strnstr(const char *phrase, const char *mot, int len);
 int				ft_atoi(const char *str);
@@ -57,7 +57,6 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_putstr_fd(char *s, int fd);
-// BONUS autre .h
 void			ft_lstadd_back(t_list **alst, t_list *new);
 void			ft_lstadd_front(t_list **alst, t_list *new);
 t_list			*ft_lstlast(t_list *lst);

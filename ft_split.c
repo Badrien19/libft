@@ -6,11 +6,15 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 15:36:21 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/17 18:08:00 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/18 16:12:52 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** charset == "\0" 
+*/
 
 static char		**free_all(char **tab)
 {

@@ -6,7 +6,7 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:07:16 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/17 13:44:13 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/18 17:01:14 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
-void			*ft_calloc(size_t nmemb, size_t size);
+void			*ft_calloc(size_t count, size_t size);
 char			*ft_strdup(const char *s);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);

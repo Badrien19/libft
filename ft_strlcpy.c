@@ -6,7 +6,7 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 14:32:17 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/17 15:32:54 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/18 17:09:43 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcpy(char *dest, const char *src, unsigned int size)
 
 	i = 0;
 	b = 0;
-	if (src == NULL || src == NULL)
+	if (dest == NULL || src == NULL)
 		return (0);
 	while (src[b] != '\0')
 		b++;

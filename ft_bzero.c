@@ -6,7 +6,7 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 16:40:57 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/08 16:49:22 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/21 15:26:31 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,5 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned int i;
-
-	i = 0;
-	while (i < n)
-	{
-		((unsigned char*)s)[i] = '\0';
-		i++;
-	}
+	ft_memset(s, 0, n);
 }

@@ -6,7 +6,7 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 16:51:03 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/18 13:55:50 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/21 15:29:21 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned int i;
 
 	i = 0;
-	if (src == NULL && dest == NULL)
-		return (dest);
+	if (dest == NULL)
+		return (NULL);
 	while (i < n)
 	{
 		((unsigned char*)dest)[i] = ((unsigned char*)src)[i];

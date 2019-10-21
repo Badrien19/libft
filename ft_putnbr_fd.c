@@ -6,7 +6,7 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 18:33:12 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/11 17:38:40 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/21 15:37:12 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	char c;
 
+	if (fd < 0)
+		return ;
 	if (n == -2147483648)
 		write(fd, "-2147483648", 11);
 	else if (n < 0)

@@ -6,7 +6,7 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 18:29:45 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/17 15:31:18 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/21 15:16:42 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (!(s == NULL || fd == 0))
+	if (!(s == NULL || fd <= 0))
 		write(fd, s, ft_strlen(s));
 }

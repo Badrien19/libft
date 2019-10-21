@@ -6,7 +6,7 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 18:31:44 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/17 15:51:04 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/21 15:52:58 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putendl_fd(char *s, int fd)
 	int		i;
 	char	c;
 
-	if (!(s == NULL || fd == 0))
+	if (!(s == NULL || fd <= 0))
 	{
 		c = '\n';
 		i = ft_strlen(s);

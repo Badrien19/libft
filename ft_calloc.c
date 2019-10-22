@@ -6,7 +6,7 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 14:50:35 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/21 14:48:12 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/22 10:54:09 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,6 @@ void	*ft_calloc(size_t count, size_t size)
 	char			*ret;
 	unsigned int	i;
 
-	if (count == 0 || size == 0)
-	{
-		count = 1;
-		size = 1;
-	}
 	if ((ret = malloc(size * count)) == 0)
 		return (0);
 	i = (size * count);

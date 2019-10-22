@@ -6,9 +6,11 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 10:21:20 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/07 13:43:22 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/22 11:02:42 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

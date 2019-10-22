@@ -6,9 +6,11 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 15:04:27 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/21 13:18:32 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/22 11:01:10 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

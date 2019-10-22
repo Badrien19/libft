@@ -6,9 +6,11 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 09:48:58 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/07 13:50:24 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/22 11:01:34 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

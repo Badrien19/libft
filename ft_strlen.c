@@ -6,7 +6,7 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 10:00:39 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/11 17:53:56 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/22 10:59:44 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *chaine)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (chaine[i] != '\0')

@@ -6,13 +6,13 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 16:34:27 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/10 17:58:49 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/22 10:45:55 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*fill_number(int i, unsigned int nb, int signe)
+static char	*fill_number(int i, unsigned int nb, int signe)
 {
 	char *number;
 
@@ -32,7 +32,7 @@ char	*fill_number(int i, unsigned int nb, int signe)
 	return (number);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	int				signe;
 	int				i;

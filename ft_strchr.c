@@ -6,9 +6,11 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 13:20:25 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/11 15:10:06 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/22 11:20:05 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strchr(const char *str, int c)
 {
@@ -23,5 +25,5 @@ char	*ft_strchr(const char *str, int c)
 	}
 	if (c == 0)
 		return ((char *)&str[i]);
-	return (0);
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 15:05:32 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/21 14:47:56 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/22 10:59:10 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strdup(const char *s)
 	char			*new;
 
 	if ((new = malloc(sizeof(char) * ft_strlen((char *)s) + 1)) == 0)
-		return (0);
+		return (NULL);
 	ft_memcpy(new, (char*)s, ft_strlen((char *)s) + 1);
 	return (new);
 }

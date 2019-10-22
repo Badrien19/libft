@@ -6,9 +6,11 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 13:43:03 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/11 15:06:17 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/22 11:02:19 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strnstr(const char *phrase, const char *mot, int len)
 {

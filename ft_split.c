@@ -6,7 +6,7 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 15:36:21 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/21 14:47:36 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/22 10:55:55 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static char		**free_all(char **tab)
 	return (0);
 }
 
-static int		motcounter(char *str, char charset)
+static int		motcounter(const char *str, char charset)
 {
 	int i;
 	int mot;
@@ -48,7 +48,7 @@ static int		motcounter(char *str, char charset)
 	return (motcount);
 }
 
-static char		*fill(char *str, char charset, int *i)
+static char		*fill(const char *str, char charset, int *i)
 {
 	char	*tmp;
 	int		y;
@@ -68,7 +68,7 @@ static char		*fill(char *str, char charset, int *i)
 	return (tmp);
 }
 
-char			**ft_split(char *str, char charset)
+char			**ft_split(const char *str, char charset)
 {
 	int		wordcount;
 	char	**tab;

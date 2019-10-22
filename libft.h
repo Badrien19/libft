@@ -6,7 +6,7 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:07:16 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/21 14:05:27 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/22 10:54:44 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void			*ft_calloc(size_t count, size_t size);
 char			*ft_strdup(const char *s);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);
-char			**ft_split(char *str, char charset);
+char			**ft_split(const char *str, char charset);
 char			*ft_itoa(int n);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void			ft_putchar_fd(char c, int fd);

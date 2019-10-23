@@ -6,7 +6,7 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 18:10:57 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/08 18:25:44 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/23 11:35:50 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return ((unsigned char*)&s[i]);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 15:36:21 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/22 10:55:55 by badrien          ###   ########.fr       */
+/*   Updated: 2019/10/22 13:50:22 by badrien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ char			**ft_split(const char *str, char charset)
 
 	x = 0;
 	i = 0;
-	if (str == NULL || charset == 0)
+	if (str == NULL)
 		return (NULL);
 	wordcount = motcounter(str, charset);
 	tab = malloc(sizeof(char *) * wordcount + 1);

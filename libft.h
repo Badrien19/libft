@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: badrien <badrien@student.42.fr>            +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:07:16 by badrien           #+#    #+#             */
-/*   Updated: 2019/10/23 12:01:00 by badrien          ###   ########.fr       */
+/*   Updated: 2020/11/02 17:01:46 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <sys/types.h>
 
 typedef struct	s_list
 {
@@ -65,5 +66,6 @@ void			ft_lstdelone(t_list *lst, void (*del)(void*));
 t_list			*ft_lstmap(t_list *lst, void *(*fonc)(void *), void (*del)(void *));
 void			ft_lstclear(t_list **lst, void (*del)(void*));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
+char    *ft_strstr(const char *haystack, const char *needle);
 
 #endif

@@ -6,9 +6,11 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 16:55:36 by user42            #+#    #+#             */
-/*   Updated: 2020/11/02 16:55:44 by user42           ###   ########.fr       */
+/*   Updated: 2020/11/02 17:02:20 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char    *ft_strstr(const char *haystack, const char *needle)
 {
